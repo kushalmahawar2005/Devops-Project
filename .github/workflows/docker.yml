@@ -16,7 +16,7 @@ jobs:
       run: docker build -t devops-app .
 
     - name: Push Docker image
-      run: docker push devops-app
-      
+      run: sudo docker push kushalmahawar/project:latest
+
     - name: Run container
       run: docker run -d -p 3000:3000 devops-app
